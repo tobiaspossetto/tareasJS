@@ -9,10 +9,7 @@
 
 
 
-    mensaje = function() {
 
-        alert('sdsd')
-    }
 
 
 
