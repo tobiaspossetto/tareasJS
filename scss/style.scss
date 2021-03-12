@@ -1,0 +1,251 @@
+$fuente: 'Roboto';
+$azul: #1F2C41;
+$rojo: #FF9791;
+$verde: #C2FAD9;
+$amarillo: #FDF78A;
+$blanco: #F2F3F7;
+$negro: #132746;
+* {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+
+body {
+    background-color: $azul;
+    .titulo {
+        border-radius: 7px 7px 0px 0px;
+        background-color: $rojo;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        text-align: center;
+        font-weight: medium;
+        padding: 20px;
+    }
+    .CreadorNotas {
+        background-color: $blanco;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px 0px 7px 7px;
+        padding: 30px;
+        .CreadorNotas-form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 10px 0px 10px 0px;
+            .CreadorNotas-titulo {
+                border: none;
+                background-color: $verde;
+                height: 50px;
+                margin-bottom: 20px;
+                padding: 5px;
+                font-size: 25px;
+            }
+            .incompleto {
+                border: 3px solid red;
+            }
+            .CreadorNotas-descripcion {
+                border: none;
+                background-color: $verde;
+                height: 50px;
+                margin-bottom: 20px;
+                padding: 5px;
+                font-size: 25px;
+            }
+            .CreadorNotas-colores {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .CreadorNotas-amarillo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    .amarillo {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $amarillo;
+                        margin-bottom: 10px;
+                        border: 0.5px solid black;
+                    }
+                    .btn-colores {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .CreadorNotas-rojo {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
+                    .rojo {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $rojo;
+                        margin-bottom: 10px;
+                        border: 0.5px solid black;
+                    }
+                    .btn-colores {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .CreadorNotas-blanco {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
+                    .blanco {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $blanco;
+                        margin-bottom: 10px;
+                        border: 0.5px solid black;
+                    }
+                    .btn-blanco {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .CreadorNotas-verde {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
+                    .verde {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $verde;
+                        margin-bottom: 10px;
+                        border: 0.5px solid black;
+                    }
+                    .btn-verde {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .CreadorNotas-crear {
+                padding: 5px 10px 5px 10px;
+                margin: auto;
+                margin-top: 40px;
+                background-color: $azul;
+                color: $blanco;
+                font-weight: medium;
+                border: none;
+                border-radius: 7px;
+                width: 100px;
+                font-size: 30px;
+            }
+        }
+        margin-bottom: 100px;
+    }
+    .contenedor-tarjetas {
+        width: 90%;
+        margin: auto;
+        .notas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .notas-ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .notas-li {
+                    width: 90%;
+                    background-color: $amarillo;
+                    border-radius: 7px;
+                    text-decoration: none;
+                    list-style: none;
+                    height: auto;
+                    margin-bottom: 40px;
+                    padding: 20px;
+                    .notas-titulo {
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                        text-decoration: underline;
+                    }
+                    .botonEliminar {
+                        display: block;
+                        margin-top: 40px;
+                        background-color: $negro;
+                        padding: 10px;
+                        text-decoration: none;
+                        font-size: auto;
+                        font-weight: 500;
+                        color: white;
+                        width: 80px;
+                        border-radius: 4px;
+                        border: none;
+                    }
+                    .botonEliminar:hover {
+                        background-color: $blanco;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .aviso {
+        width: 30%;
+        background-color: #40c577;
+        border-radius: 0px 7px 7px 0px;
+        height: 150px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .aviso-p {
+            color: black;
+            text-align: center;
+            font-size: 1em;
+        }
+    }
+    .aviso--activo {
+        display: block;
+        position: fixed;
+        top: 0px;
+    }
+    .aviso--eliminado {
+        background-color: #d8534c;
+        .aviso-p {
+            color: white;
+        }
+    }
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $negro;
+        padding: 10px;
+        .footer-firma {
+            .firma-nombre {
+                width: 140px;
+            }
+        }
+        .footer-social {
+            display: flex;
+            justify-content: space-evenly;
+            .social-insta {
+                width: 30px;
+                margin-right: 10px;
+            }
+            .social-link {
+                width: 30px;
+                margin-right: 10px;
+            }
+            .social-li {
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

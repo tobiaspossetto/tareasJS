@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotasOnline</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class='titulo'>
+        Mis Tareas
+    </h1>
+    <div id='aviso' class="aviso ">
+        <p id='aviso-p' class='aviso-p'>Su nota tarea fue agregada con exito</p>
+    </div>
+    <main class='CreadorNotas'>
+        <form action="" class="CreadorNotas-form">
+            <input type="text" id='titulo' class='CreadorNotas-titulo ' placeholder="Titulo">
+            <input type="text" id='descripcion' class='CreadorNotas-descripcion' placeholder="Descripción">
+            <!--
+            <div class="CreadorNotas-colores">
+
+                <div class="CreadorNotas-amarillo">
+                    <div class="amarillo"></div>
+                    <input type="radio" name='color' class='btn-colores btn-amarillo' id='btn-amarillo'>
+                </div>
+                <div class="CreadorNotas-rojo">
+                    <div class="rojo"></div>
+                    <input type="radio" name='color' class=' btn-colores btn-rojo ' id='btn-rojo '>
+                </div>
+                <div class="CreadorNotas-blanco">
+                    <div class="blanco"></div>
+                    <input type="radio" name='color' class='btn-colores btn-blanco ' id='btn-blanco '>
+                </div>
+                <div class="CreadorNotas-verde">
+                    <div class="verde"></div>
+                    <input type="radio" value='1' name='color' class='btn-colores btn-verde ' id='btn-verde '>
+                </div>
+                
+
+                
+
+            </div>
+            
+        -->
+            <input type="button" value="Crear" id='CreadorNotas-crear ' class='CreadorNotas-crear '>
+        </form>
+    </main>
+
+
+    <div class="contenedor-tarjetas">
+        <form action="" id='notas' class="notas">
+            <ul id='notas-ul' class="notas-ul">
+                <li id="notas-li" class="notas-li">
+
+                    <h1 id="notas-titulo" class="notas-titulo">
+                        Preparar la cena
+                    </h1>
+
+                    <p id="notas-descripcion" class="notas-descripcion">
+                        Pollo al horno con papas fritas y ensalada.
+                    </p>
+
+
+
+                    <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
+
+
+                </li>
+                <li id="notas-li" class="notas-li">
+
+                    <h1 id="notas-titulo" class="notas-titulo">
+                        Preparar la cena
+                    </h1>
+
+                    <p id="notas-descripcion" class="notas-descripcion">
+                        Pollo al horno con papas fritas y ensalada.
+                    </p>
+
+
+
+                    <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
+
+
+                </li>
+                <li id="notas-li" class="notas-li">
+
+                    <h1 id="notas-titulo" class="notas-titulo">
+                        Preparar la cena
+                    </h1>
+
+                    <p id="notas-descripcion" class="notas-descripcion">
+                        Pollo al horno con papas fritas y ensalada. Pollo al horno con papas fritas y ensalada. Pollo al horno con papas fritas y ensalada. Pollo al horno con papas fritas y ensalada.
+                    </p>
+
+
+                    <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
+
+
+
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-firma">
+            <img src="assets/img/firma_blanco.png" alt="" class="firma-nombre">
+        </div>
+
+        <div class="footer-social">
+
+            <a href="">
+                <img src="assets/img/social1.png" alt="" class="social-insta">
+            </a>
+            <a href="">
+
+                <img src="assets/img/social2.png" alt="" class="social-link">
+            </a>
+
+            <a href="">
+
+                <img src="assets/img/social3.png" alt="" class="social-li">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/JavaScript.js"></script>
+</body>
+
+</html>
