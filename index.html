@@ -16,12 +16,15 @@
         Mis Tareas
     </h1>
     <div id='aviso' class="aviso ">
-        <p id='aviso-p' class='aviso-p'>Su nota tarea fue agregada con exito</p>
+        <p id='aviso-p' class='aviso-p'>Su  tarea fue agregada con exito</p>
+       
+        <a id='notificacion' class='aviso-a' href=""><img class='aviso-img' width='30px' src="assets/img/check.png" alt=""></a>
     </div>
     <main class='CreadorNotas'>
-        <form action="" class="CreadorNotas-form">
-            <input type="text" id='titulo' class='CreadorNotas-titulo ' placeholder="Titulo">
-            <input type="text" id='descripcion' class='CreadorNotas-descripcion' placeholder="Descripción">
+        <form  action="" id='formTask' class="CreadorNotas-form">
+            <input type="text" id='title' class='CreadorNotas-titulo ' placeholder="Titulo" required >
+           
+            <textarea   placeholder="Descripción" class='CreadorNotas-descripcion ' id="description" cols="60" rows="10" required></textarea>
             <!--
             <div class="CreadorNotas-colores">
 
@@ -46,72 +49,47 @@
                 
 
             </div>
-            
+            onclick="saveTask();"
         -->
-            <input type="button" value="Crear" id='CreadorNotas-crear ' class='CreadorNotas-crear '>
+            <input type="button"  value="Crear" class='CreadorNotas-crear' id = 'submit'>
+            
         </form>
     </main>
 
 
     <div class="contenedor-tarjetas">
-        <form action="" id='notas' class="notas">
+        <div action="" id='notas' class="notas">
             <ul id='notas-ul' class="notas-ul">
-                <li id="notas-li" class="notas-li">
-
-                    <h1 id="notas-titulo" class="notas-titulo">
-                        Preparar la cena
-                    </h1>
-
-                    <p id="notas-descripcion" class="notas-descripcion">
-                        Pollo al horno con papas fritas y ensalada.
-                    </p>
-
-
-
-                    <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
-
-
-                </li>
-                <li id="notas-li" class="notas-li">
-
-                    <h1 id="notas-titulo" class="notas-titulo">
-                        Preparar la cena
-                    </h1>
-
-                    <p id="notas-descripcion" class="notas-descripcion">
-                        Pollo al horno con papas fritas y ensalada.
-                    </p>
+                <!-- 
+                    <li id="notas-li" class="notas-li">
+    
+                        <h1 id="notas-titulo" class="notas-titulo">
+                            Preparar la cena
+                        </h1>
+    
+                        <p id="notas-descripcion" class="notas-descripcion">
+                            Pollo al horno con papas fritas y ensalada.
+                        </p>
+    
+    
+    
+                        <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
+    
+    
+                    </li>
 
 
 
-                    <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
+                -->
 
-
-                </li>
-                <li id="notas-li" class="notas-li">
-
-                    <h1 id="notas-titulo" class="notas-titulo">
-                        Preparar la cena
-                    </h1>
-
-                    <p id="notas-descripcion" class="notas-descripcion">
-                        Pollo al horno con papas fritas y ensalada. Pollo al horno con papas fritas y ensalada. Pollo al horno con papas fritas y ensalada. Pollo al horno con papas fritas y ensalada.
-                    </p>
-
-
-                    <input type="button" id='btnEliminar' class="botonEliminar" value="Eliminar">
-
-
-
-                </li>
+               
             </ul>
-        </form>
+        </div>
     </div>
 
+   
     <footer class="footer">
-        <div class="footer-firma">
-            <img src="assets/img/firma_blanco.png" alt="" class="firma-nombre">
-        </div>
+       
 
         <div class="footer-social">
 
@@ -130,7 +108,10 @@
         </div>
     </footer>
 
-    <script src="js/JavaScript.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script> 
+    <script src="js/animaciones.js"></script>
 </body>
 
 </html>
