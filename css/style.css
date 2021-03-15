@@ -6,7 +6,10 @@
   font-family: "Roboto"; }
 
 body {
-  background-color: #1F2C41; }
+  background-color: #1F2C41;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
   body .titulo {
     border-radius: 7px 7px 0px 0px;
     background-color: #FF9791;
@@ -15,7 +18,8 @@ body {
     margin-top: 30px;
     text-align: center;
     font-weight: medium;
-    padding: 20px; }
+    padding: 20px;
+    margin-bottom: 0px; }
   body .CreadorNotas {
     background-color: #F2F3F7;
     width: 90%;
@@ -24,6 +28,7 @@ body {
     flex-direction: column;
     border-radius: 0px 0px 7px 7px;
     padding: 30px;
+    margin-top: 0px;
     margin-bottom: 100px; }
     body .CreadorNotas .CreadorNotas-form {
       display: flex;
@@ -37,15 +42,15 @@ body {
         margin-bottom: 20px;
         padding: 5px;
         font-size: 25px; }
-      body .CreadorNotas .CreadorNotas-form .incompleto {
-        border: 3px solid red; }
       body .CreadorNotas .CreadorNotas-form .CreadorNotas-descripcion {
         border: none;
         background-color: #C2FAD9;
-        height: 50px;
+        height: 100px;
         margin-bottom: 20px;
         padding: 5px;
         font-size: 25px; }
+      body .CreadorNotas .CreadorNotas-form .incompleto {
+        border: 2px dashed red; }
       body .CreadorNotas .CreadorNotas-form .CreadorNotas-colores {
         display: flex;
         justify-content: space-evenly;
@@ -126,6 +131,7 @@ body {
       justify-content: center;
       align-items: center; }
       body .contenedor-tarjetas .notas .notas-ul {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -160,35 +166,29 @@ body {
             background-color: #F2F3F7;
             color: black; }
   body .aviso {
-    width: 30%;
+    width: 50%;
     background-color: #40c577;
-    border-radius: 0px 7px 7px 0px;
-    height: 150px;
+    border-radius: 0px 3px 3px 0px;
+    height: 130px;
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none; }
+    position: fixed;
+    left: -4500px; }
     body .aviso .aviso-p {
       color: black;
       text-align: center;
-      font-size: 1em; }
-  body .aviso--activo {
-    display: block;
-    position: fixed;
-    top: 0px; }
-  body .aviso--eliminado {
-    background-color: #d8534c; }
-    body .aviso--eliminado .aviso-p {
-      color: white; }
+      font-size: 1em;
+      margin-right: 10px; }
+    body .aviso .aviso-a {
+      width: 30px;
+      height: 30px; }
   body .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background-color: #132746;
-    padding: 10px; }
-    body .footer .footer-firma .firma-nombre {
-      width: 140px; }
+    padding: 10px;
+    width: 100%;
+    align-self: end; }
     body .footer .footer-social {
       display: flex;
       justify-content: space-evenly; }

@@ -11,10 +11,15 @@ $negro: #132746;
     margin: 0;
     box-sizing: border-box;
     font-family: $fuente;
+
 }
+
 
 body {
     background-color: $azul;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     .titulo {
         border-radius: 7px 7px 0px 0px;
         background-color: $rojo;
@@ -24,6 +29,7 @@ body {
         text-align: center;
         font-weight: medium;
         padding: 20px;
+        margin-bottom: 0px;
     }
     .CreadorNotas {
         background-color: $blanco;
@@ -33,6 +39,7 @@ body {
         flex-direction: column;
         border-radius: 0px 0px 7px 7px;
         padding: 30px;
+        margin-top: 0px;
         .CreadorNotas-form {
             display: flex;
             justify-content: center;
@@ -46,16 +53,18 @@ body {
                 padding: 5px;
                 font-size: 25px;
             }
-            .incompleto {
-                border: 3px solid red;
-            }
+            
             .CreadorNotas-descripcion {
                 border: none;
                 background-color: $verde;
-                height: 50px;
+                height: 100px;
                 margin-bottom: 20px;
                 padding: 5px;
                 font-size: 25px;
+            }
+
+            .incompleto {
+                border: 2px dashed red;
             }
             .CreadorNotas-colores {
                 display: flex;
@@ -154,10 +163,12 @@ body {
             justify-content: center;
             align-items: center;
             .notas-ul {
+                width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                
                 .notas-li {
                     width: 90%;
                     background-color: $amarillo;
@@ -167,6 +178,7 @@ body {
                     height: auto;
                     margin-bottom: 40px;
                     padding: 20px;
+                    
                     .notas-titulo {
                         font-size: 20px;
                         font-weight: 500;
@@ -195,43 +207,40 @@ body {
         }
     }
     .aviso {
-        width: 30%;
+        width: 50%;
         background-color: #40c577;
-        border-radius: 0px 7px 7px 0px;
-        height: 150px;
+        border-radius: 0px 3px 3px 0px;
+        height: 130px;
         padding: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        display: none;
+        
+        position: fixed;
+        left: -4500px;
         .aviso-p {
             color: black;
             text-align: center;
             font-size: 1em;
+            margin-right: 10px;
+        }
+
+        .aviso-a{
+            width: 30px;
+            height: 30px;
+            
         }
     }
-    .aviso--activo {
-        display: block;
-        position: fixed;
-        top: 0px;
-    }
-    .aviso--eliminado {
-        background-color: #d8534c;
-        .aviso-p {
-            color: white;
-        }
-    }
+ 
+   
     .footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        
         background-color: $negro;
         padding: 10px;
-        .footer-firma {
-            .firma-nombre {
-                width: 140px;
-            }
-        }
+       width: 100%;
+       align-self: end;
+        
+       
         .footer-social {
             display: flex;
             justify-content: space-evenly;
