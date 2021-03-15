@@ -2,7 +2,7 @@
 //funcion que se ejecuta al hacer click en enviar
 
 $(document).ready(function(){
-   
+    
   //si click en submit
     $('#submit').click(function () {
         //asigno el valor de los inputs
@@ -64,11 +64,16 @@ $(document).ready(function(){
  
  
  
- 
- 
- 
- 
- 
+    //al iniciar traigo el arreglo tasks del localStorage para ver si tenia algo guardado
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    //si esta vacio entonces muestro el aviso de que no hay tareas
+    if (tasks.length == 0) {
+        console.log('vacio')
+        let avisoVacio = document.getElementById("sinTareas");
+        avisoVacio.style.display = "block";
+    }
+   
+
   function saveTask(){
      //guardo los valores que tengan title y description
  
@@ -105,6 +110,9 @@ $(document).ready(function(){
      }
  
      getTask();
+
+     let avisoVacio = document.getElementById("sinTareas");
+     avisoVacio.style.display = "none";
  
  }
  
@@ -113,9 +121,12 @@ $(document).ready(function(){
  
  //imprime
  function getTask(){
+
+
      //task va a tomar el arreglo que esta en el localStorage
      let tasks = JSON.parse(localStorage.getItem('tasks'));
- 
+     let hayAlgo= 1;
+     
      //tomo la etiqueta con clase notas-ul
      let tasksView = document.getElementById('notas-ul');
  
@@ -144,6 +155,8 @@ $(document).ready(function(){
          
  
      }
+
+     return hayAlgo;
  }
  
  //funcion para borrar tareas
@@ -164,6 +177,15 @@ $(document).ready(function(){
      localStorage.setItem('tasks', JSON.stringify(tasks));
      getTask();
     
+    //vuelvo a comprobar si esta vacio el arreglo tasks, para mostrar el aviso
+     if (tasks.length == 0) {
+        console.log('vacio')
+        let avisoVacio = document.getElementById("sinTareas");
+        avisoVacio.style.display = "block";
+    }else{
+        let avisoVacio = document.getElementById("sinTareas");
+        avisoVacio.style.display = "none";
+    }
      
  }
 
